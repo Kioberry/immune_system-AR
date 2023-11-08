@@ -26,4 +26,4 @@ MonoBehaviour:
     m_Size: {x: 0.25987262, y: 0.2}
     m_SpecifySize: 1
     m_Name: star
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: b22663e545ac44f4386aa38bc7e67dca, type: 3}
