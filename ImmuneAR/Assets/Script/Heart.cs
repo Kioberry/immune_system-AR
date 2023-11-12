@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
+    public static Heart Instance;
+    private void Awake() {
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
