@@ -5,6 +5,8 @@ using UnityEngine.XR.ARFoundation;
 
 public class ImageTracker : MonoBehaviour
 {
+    public bool WindowsDebug = Application.platform == RuntimePlatform.WindowsEditor;
+
     public GameObject HeartPrefab;
     public GameObject TCellPrefab;
     public GameObject BCellPrefab;
@@ -40,13 +42,15 @@ public class ImageTracker : MonoBehaviour
             Instantiate(HeartPrefab, img.transform);
             Debug.Log("Heart detected");
         }
-        if (img.referenceImage.name == "BCell") {
+        else if (img.referenceImage.name == "BCell") {
             Instantiate(BCellPrefab, img.transform);
             Debug.Log("BCell detected");
         }
-        if (img.referenceImage.name == "TCell") {
+        else if (img.referenceImage.name == "TCell") {
             Instantiate(TCellPrefab, img.transform);
             Debug.Log("TCell detected");
+        } else {
+            Debug.Log($"Unknown detected: {img.referenceImage.name}");
         }
     }
 

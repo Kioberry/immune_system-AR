@@ -35,7 +35,7 @@ MonoBehaviour:
       m_GuidHigh: 12249477571930309001
     m_Size: {x: 0.092, y: 0.092}
     m_SpecifySize: 1
-    m_Name: heart
+    m_Name: Heart
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4644139078554180633
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_GuidHigh: 13784387174073490008
     m_Size: {x: 0.092, y: 0.092}
     m_SpecifySize: 1
-    m_Name: T_cell
+    m_Name: TCell
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5454900566329908279
@@ -55,5 +55,5 @@ MonoBehaviour:
       m_GuidHigh: 5582051444613580089
     m_Size: {x: 0.092, y: 0.092}
     m_SpecifySize: 1
-    m_Name: B_cell
+    m_Name: BCell
     m_Texture: {fileID: 0}

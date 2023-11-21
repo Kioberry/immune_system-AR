@@ -9,10 +9,26 @@ public class Heart : MonoBehaviour
         Instance = this;
     }
 
+    public int MaxHP;
+    public int HP;
+
+    public void OnAttack() {
+        if (HP > 0) {
+            HP--;
+            Debug.Log("HeartAttacked");
+            if (HP <= 0) {
+                HP = 0;
+                // TODO Dead
+                Debug.Log("Dead");
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        VirusManager.Instance.SetupHeart(transform);
+        HP = MaxHP;
     }
 
     // Update is called once per frame

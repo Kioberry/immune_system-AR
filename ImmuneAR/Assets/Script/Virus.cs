@@ -7,6 +7,11 @@ public class Virus : MonoBehaviour
 {
     private NavMeshAgent agent;
 
+    public void Kill() {
+        Debug.Log("Virus Killed");
+        Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +26,11 @@ public class Virus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.TryGetComponent<Heart>(out Heart heart)) {
-            Debug.Log("HeartAttacked");
+            heart.OnAttack();
             Destroy(gameObject);
+        }
+        if (other.TryGetComponent<Tower>(out Tower tower)) {
+            tower.OnVirusEnter(this);
         }
     }
 }
