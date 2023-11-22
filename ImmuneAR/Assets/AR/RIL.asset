@@ -18,16 +18,6 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5453035377186081562
-      m_GuidHigh: 4689404426409620401
-    m_SerializedTextureGuid:
-      m_GuidLow: 4968672896922051557
-      m_GuidHigh: 14591072112465898040
-    m_Size: {x: 0.12993631, y: 0.1}
-    m_SpecifySize: 1
-    m_Name: star
-    m_Texture: {fileID: 2800000, guid: b22663e545ac44f4386aa38bc7e67dca, type: 3}
-  - m_SerializedGuid:
       m_GuidLow: 4611694796656623486
       m_GuidHigh: 2156182176607226302
     m_SerializedTextureGuid:
@@ -56,4 +46,14 @@ MonoBehaviour:
     m_Size: {x: 0.092, y: 0.092}
     m_SpecifySize: 1
     m_Name: BCell
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4777175789276916956
+      m_GuidHigh: 5620228446782582205
+    m_SerializedTextureGuid:
+      m_GuidLow: 12982080002432957439
+      m_GuidHigh: 2389118670673301785
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: WCell
     m_Texture: {fileID: 0}

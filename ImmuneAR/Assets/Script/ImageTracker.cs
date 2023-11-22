@@ -5,11 +5,12 @@ using UnityEngine.XR.ARFoundation;
 
 public class ImageTracker : MonoBehaviour
 {
-    public bool WindowsDebug = Application.platform == RuntimePlatform.WindowsEditor;
+    public bool WindowsDebug => Application.platform == RuntimePlatform.WindowsEditor;
 
     public GameObject HeartPrefab;
     public GameObject TCellPrefab;
     public GameObject BCellPrefab;
+    public GameObject WCellPrefab;
 
     private ARTrackedImageManager TrackerManager;
 
@@ -49,6 +50,10 @@ public class ImageTracker : MonoBehaviour
         else if (img.referenceImage.name == "TCell") {
             Instantiate(TCellPrefab, img.transform);
             Debug.Log("TCell detected");
+        } 
+        else if (img.referenceImage.name == "WCell") {
+            Instantiate(WCellPrefab, img.transform);
+            Debug.Log("WCell detected");
         } else {
             Debug.Log($"Unknown detected: {img.referenceImage.name}");
         }
@@ -65,7 +70,15 @@ public class ImageTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (WindowsDebug) {
+            Instantiate(HeartPrefab);
+
+            Instantiate(BCellPrefab, new Vector3(0.3f, 0f, 0f), Quaternion.identity);
+
+            Instantiate(TCellPrefab, new Vector3(0f, 0f, 0.3f), Quaternion.identity);
+
+            Instantiate(WCellPrefab, new Vector3(-0.3f, 0f, 0f), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
